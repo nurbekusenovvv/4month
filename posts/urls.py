@@ -1,10 +1,11 @@
 from django.urls import path
-
-from posts.views import  get_index, get_about, get_contacts#,hello,
+from . import views
+from posts.views import get_create, get_detail, get_update, get_admin
 
 urlpatterns = [
-    # path("hello/", hello, name="hello-view"),
-    path("", get_index, name="index-page"),
-    path("about/", get_about, name="about-page"),
-    path("contacts/", get_contacts, name="contacts-page"),
+    path("", get_admin, name="get_admin"),
+    path("create/", get_create, name="get_create"),
+    path("detail/", get_detail, name="get_datail"),
+    path("update/", get_update, name="get_update"),
 ]
+
